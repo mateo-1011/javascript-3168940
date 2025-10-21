@@ -1,0 +1,22 @@
+/* animacion desaparece medusa*/    
+
+.saltar {
+    animation: saltar 2.5s ease forwards;
+}
+
+
+@keyframes salto {
+ 0%{transform: translateY(0); opacity: 1;}  
+ 30%{transform: translateX(-60px);}
+ 100%{transform: translateY(0); opacity: 0;} 
+}
+
+.nube {
+  animation: nube-mover 10s linear infinite;
+}
+
+@keyframes nube-mover {
+  0%, 100% { transform: translateY(0); }
+  100% { transform: translateY(-40px); }
+}
+
