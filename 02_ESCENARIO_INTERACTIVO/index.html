@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3 Mini Juegos Sencillos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="contenedor-juegos">
+    
+    <!-- Juego 1: Recolecta Frutas en el Bosque -->
+    <section id="juego1" class="juego">
+      <div class="fondo" style="background-image: url('asset/paisaje.jpg');"></div>
+      <h2>Recolecta Frutas</h2>
+      <p>Frutas recolectadas: <span class="contador">0</span></p>
+      
+      <!-- 4 Clickeables -->
+      <img src="asset/manzana.png" class="item clickeable" alt="Manzana">
+      <img src="asset/sandia.png" class="item clickeable" alt="Platano">
+      <img src="asset/bayas luminosa.png" class="item clickeable" alt="Naranja">
+      <img src="asset/bayas.png" class="item clickeable" alt="Fresa">
+      
+      <!-- 2 Animables (pájaros volando en bucle) -->
+      <img src="asset/loro.png" class="animable pajaro" alt="Pajaro 1">
+      <img src="asset/loro.png" class="animable pajaro" alt="Pajaro 2">
+    </section>
+    
+    <!-- Juego 2: Encuentra Tesoros en la Playa -->
+    <section id="juego2" class="juego">
+      <div class="fondo" style="background-image: url('asset/mar.jpg');"></div>
+      <h2>Encuentra Tesoros</h2>
+      <p>Tesoros encontrados: <span class="contador">0</span></p>
+      
+      <!-- 4 Clickeables -->
+      <img src="asset/cofre.png" class="item clickeable" alt="Cofre">
+      <img src="asset/moneda.png" class="item clickeable" alt="Moneda">
+      <img src="asset/joya.png" class="item clickeable" alt="Joya">
+      <img src="asset/perla.png" class="item clickeable" alt="Perla">
+      
+      <!-- 2 Animables (cangrejos caminando en bucle) -->
+      <img src="asset/cangrejo.png" class="animable cangrejo" alt="Cangrejo 1">
+      <img src="asset/cangrejo.png" class="animable cangrejo" alt="Cangrejo 2">
+    </section>
+    
+    <!-- Juego 3: Apaga Fuegos en la Ciudad -->
+    <section id="juego3" class="juego">
+      <div class="fondo" style="background-image: url('asset/ciudad.jpg');"></div>
+      <h2>Apaga Fuegos</h2>
+      <p>Fuegos apagados: <span class="contador">0</span></p>
+      
+      <!-- 4 Clickeables -->
+      <img src="asset/fire.png" class="item clickeable" alt="Fuego 1">
+      <img src="asset/fire.png" class="item clickeable" alt="Fuego 2">
+      <img src="asset/fire.png" class="item clickeable" alt="Fuego 3">
+      <img src="asset/fire.png" class="item clickeable" alt="Fuego 4">
+      
+      <!-- 2 Animables (bomberos corriendo en bucle) -->
+      <img src="asset/bombero1.png" class="animable bombero" alt="Bombero 1">
+      <img src="asset/bombero2.png" class="animable bombero" alt="Bombero 2">
+    </section>
+    
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

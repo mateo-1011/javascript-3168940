@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.contenedor-juegos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  max-width: 800px;
+}
+
+.juego {
+  position: relative;
+  width: 750px;
+  height: 500px;
+  border: 2px solid #333;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+h2 {
+  text-align: center;
+  margin: 10px 0;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+  z-index: 10;
+}
+
+p {
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+  z-index: 10;
+}
+
+.item {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.item:hover {
+  transform: scale(1.1);
+}
+
+.animable {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+}
+
+/* Animaciones con keyframes */
+@keyframes mover-izquierda-derecha {
+  0% { left: -70px; }
+  100% { left: 750px; }
+}
+
+@keyframes salto-desaparecer {
+  0% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(-20px); opacity: 1; }
+  100% { transform: translateY(0); opacity: 0; }
+}
+
+/* Estilos por juego */
+#juego1 .pajaro {
+  animation: mover-izquierda-derecha 10s linear infinite;
+}
+
+#juego1 .pajaro:nth-of-type(1) {
+  top: 50px;
+  animation-delay: 0s;
+}
+
+#juego1 .pajaro:nth-of-type(2) {
+  top: 100px;
+  animation-delay: 5s;
+}
+
+#juego1 .clickeable.salida {
+  animation: salto-desaparecer 0.5s forwards;
+}
+
+#juego2 .cangrejo {
+  animation: mover-izquierda-derecha 8s linear infinite;
+}
+
+#juego2 .cangrejo:nth-of-type(1) {
+  bottom: 50px;
+  animation-delay: 0s;
+}
+
+#juego2 .cangrejo:nth-of-type(2) {
+  bottom: 100px;
+  animation-delay: 4s;
+}
+
+#juego2 .clickeable.salida {
+  animation: salto-desaparecer 0.5s forwards;
+}
+
+#juego3 .bombero {
+  animation: mover-izquierda-derecha 12s linear infinite;
+}
+
+#juego3 .bombero:nth-of-type(1) {
+  bottom: 50px;
+  animation-delay: 0s;
+}
+
+#juego3 .bombero:nth-of-type(2) {
+  bottom: 100px;
+  animation-delay: 6s;
+}
+
+#juego3 .clickeable.salida {
+  animation: salto-desaparecer 0.5s forwards;
+}
+
+/* Posiciones iniciales de clickeables */
+#juego1 .clickeable:nth-child(1) { top: 150px; left: 100px; }
+#juego1 .clickeable:nth-child(2) { top: 200px; left: 300px; }
+#juego1 .clickeable:nth-child(3) { top: 250px; left: 500px; }
+#juego1 .clickeable:nth-child(4) { top: 300px; left: 200px; }
+
+#juego2 .clickeable:nth-child(1) { top: 150px; left: 150px; }
+#juego2 .clickeable:nth-child(2) { top: 200px; left: 350px; }
+#juego2 .clickeable:nth-child(3) { top: 250px; left: 550px; }
+#juego2 .clickeable:nth-child(4) { top: 300px; left: 250px; }
+
+#juego3 .clickeable:nth-child(1) { top: 150px; left: 120px; }
+#juego3 .clickeable:nth-child(2) { top: 200px; left: 320px; }
+#juego3 .clickeable:nth-child(3) { top: 250px; left: 520px; }
+#juego3 .clickeable:nth-child(4) { top: 300px; left: 220px; }
