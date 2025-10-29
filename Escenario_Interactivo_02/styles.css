@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+  padding: 20px;
+}
+
+.galeria {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.visor {
+  width: 750px;
+  height: 500px;
+  margin: 0 auto 20px;
+  border: 3px solid #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.juego {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+
+.fondo {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+h2, p {
+  z-index: 10;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  margin: 10px 0;
+}
+
+.item {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.animable {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+}
+
+/* ANIMACIONES */
+@keyframes mover-izq-der {
+  from { left: -80px; }
+  to { left: 750px; }
+}
+
+@keyframes salto {
+  0% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(-25px); }
+  100% { transform: translateY(0); opacity: 0; }
+}
+
+.pajaro, .cangrejo, .bombero {
+  animation: mover-izq-der 10s linear infinite;
+}
+
+.pajaro:nth-child(1) { top: 60px; animation-delay: 0s; }
+.pajaro:nth-child(2) { top: 110px; animation-delay: 5s; }
+
+.cangrejo:nth-child(1) { bottom: 60px; animation-delay: 0s; }
+.cangrejo:nth-child(2) { bottom: 100px; animation-delay: 4s; }
+
+.bombero:nth-child(1) { bottom: 60px; animation-delay: 0s; }
+.bombero:nth-child(2) { bottom: 100px; animation-delay: 6s; }
+
+.salida {
+  animation: salto 0.5s forwards;
+}
+
+/* CONTROLES */
+.controles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.flecha {
+  background: #007bff;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.flecha:hover {
+  background: #0056b3;
+}
+
+.miniaturas {
+  display: flex;
+  gap: 10px;
+}
+
+.mini {
+  cursor: pointer;
+  text-align: center;
+  padding: 8px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.1);
+}
+
+.mini.activo, .mini:hover {
+  background: #007bff;
+}
+
+.mini img {
+  width: 80px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.mini p {
+  font-size: 12px;
+  margin: 0;
+}
+
+.escena {
+  display: none;
+}
+
+.activo {
+  display: block;
+}
