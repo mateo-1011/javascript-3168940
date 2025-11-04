@@ -8,12 +8,13 @@
 </head>
 <body>
 
-  
   <div class="galeria">
 
-  
+    <!-- VISOR: AQUÍ VAN LOS 3 JUEGOS -->
     <div class="visor">
-      <section id="juego1" class="juego escena">
+
+      <!-- JUEGO 1: BOSQUE -->
+      <section id="juego1" class="juego escena activo">
         <div class="fondo" style="background-image: url('asset/paisaje.jpg');"></div>
         <h2>Recolecta Frutas</h2>
         <p style="color: rgb(51, 255, 10);">Frutas recolectadas: <span class="contador">0</span></p>
@@ -23,9 +24,41 @@
         <img src="asset/bayas luminosa.png" class="item clickeable">
         <img src="asset/loro.png" class="animable pajaro">
         <img src="asset/loro.png" class="animable pajaro">
+        <audio class="fruit" src="asset/cut fruit.mp3"></audio>
       </section>
-    </div>
 
+      <!-- JUEGO 2: PLAYA -->
+      <section id="juego2" class="juego escena">
+        <div class="fondo" style="background-image: url('asset/mar.jpg');"></div>
+        <h2>Encuentra Tesoros</h2>
+        <p>Tesoros encontrados: <span class="contador">0</span></p>
+        <img src="asset/cofre.png" class="item clickeable">
+        <img src="asset/moneda.png" class="item clickeable">
+        <img src="asset/joya.png" class="item clickeable">
+        <img src="asset/perla.png" class="item clickeable">
+        <img src="asset/cangrejo.png" class="animable cangrejo">
+        <img src="asset/cangrejo.png" class="animable cangrejo">
+        <audio class="coin" src="asset/coins.mp3"></audio>
+      </section>
+
+      <!-- JUEGO 3: CIUDAD -->
+      <section id="juego3" class="juego escena">
+        <div class="fondo" style="background-image: url('asset/ciudad.jpg');"></div>
+        <h2>Apaga Fuegos</h2>
+        <p>Fuegos apagados: <span class="contador">0</span></p>
+        <img src="asset/fire.png" class="item clickeable">
+        <img src="asset/fire.png" class="item clickeable">
+        <img src="asset/fire.png" class="item clickeable">
+        <img src="asset/fire.png" class="item clickeable">
+        <img src="asset/bombero1.png" class="animable bombero">
+        <img src="asset/bombero2.png" class="animable bombero">
+        <audio class="fogo" src="asset/Sonido Fuego.mp3"></audio>
+      </section>
+
+    </div>
+    <!-- FIN DEL VISOR -->
+
+    <!-- CONTROLES -->
     <div class="controles">
       <button class="flecha izquierda">←</button>
 
@@ -46,34 +79,7 @@
 
       <button class="flecha derecha">→</button>
     </div>
-  </div>
 
-
-    <!-- Juego 2 -->
-    <section id="juego2" class="juego escena">
-      <div class="fondo" style="background-image: url('asset/mar.jpg');"></div>
-      <h2>Encuentra Tesoros</h2>
-      <p>Tesoros encontrados: <span class="contador">0</span></p>
-      <img src="asset/cofre.png" class="item clickeable">
-      <img src="asset/moneda.png" class="item clickeable">
-      <img src="asset/joya.png" class="item clickeable">
-      <img src="asset/perla.png" class="item clickeable">
-      <img src="asset/cangrejo.png" class="animable cangrejo">
-      <img src="asset/cangrejo.png" class="animable cangrejo">
-    </section>
-
-    <!-- Juego 3 -->
-    <section id="juego3" class="juego escena">
-      <div class="fondo" style="background-image: url('assets/fondo_ciudad.png');"></div>
-      <h2>Apaga Fuegos</h2>
-      <p>Fuegos apagados: <span class="contador">0</span></p>
-      <img src="asset/fire.png" class="item clickeable">
-      <img src="asset/fire.png" class="item clickeable">
-      <img src="asset/fire.png" class="item clickeable">
-      <img src="asset/fire.png" class="item clickeable">
-      <img src="asset/bombero1.png" class="animable bombero">
-      <img src="asset/bombero2.png" class="animable bombero">
-    </section>
   </div>
 
   <script src="app.js"></script>

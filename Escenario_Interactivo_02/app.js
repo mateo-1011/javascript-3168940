@@ -6,7 +6,9 @@ const juego2Contador = document.querySelector('#juego2 .contador');
 
 const juego3Clickeables = document.querySelectorAll('#juego3 .clickeable');
 const juego3Contador = document.querySelector('#juego3 .contador');
-
+const cutFruit = document.querySelector('.fruit');
+const coinSound = document.querySelector('.coin');
+const fogoSound = document.querySelector('.fogo');
 // puntaje
 let score1 = 0;
 let score2 = 0;
@@ -67,6 +69,7 @@ function posicionarInicial(items) {
 juego1Clickeables.forEach(function(item) {
   item.addEventListener('click', function() {
     manejarClic(item, juego1Contador);
+    cutFruit.play();
   });
 });
 
@@ -74,6 +77,7 @@ juego1Clickeables.forEach(function(item) {
 juego2Clickeables.forEach(function(item) {
   item.addEventListener('click', function() {
     manejarClic(item, juego2Contador);
+    coinSound.play();
   });
 });
 
@@ -81,6 +85,7 @@ juego2Clickeables.forEach(function(item) {
 juego3Clickeables.forEach(function(item) {
   item.addEventListener('click', function() {
     manejarClic(item, juego3Contador);
+    fogoSound.play();
   });
 });
 
@@ -105,31 +110,26 @@ console.log(flechaDerecha);
 
 /* 2. Funciones */
 function mostrarEscena(i) {
+  // Cambiar juegos
+  escenas.forEach(esc => esc.classList.remove('activo'));
+  escenas[i].classList.add('activo');
 
-    for (let j = 0; j < escenas.length; j++) {
-        escenas[j].classList.remove('activo');
-        
-    }
- escenas[i].classList.add('activo');
- indice = i;
+  // CAMBIAR MINIATURAS (esto faltaba)
+  miniaturas.forEach(mini => mini.classList.remove('activo'));
+  miniaturas[i].classList.add('activo');
 
+  indice = i;
 }
 
 //Mostrar la pantalla i al iniciar 
 mostrarEscena(0);
 
-flechaDerecha.addEventListener('click', function() {
-    indice = indice -1
-    if (indice < 0) {
-        indice = escenas.length -1;
-    }
+flechaIzquierda.addEventListener('click', function() {
+    indice = (indice - 1 + escenas.length) % escenas.length;
     mostrarEscena(indice);
 });
 
-flechaIzquierda.addEventListener('click', function() {
-    indice = indice +1
-    if (indice >= escenas.length) {
-        indice = 0;
-    }
+flechaDerecha.addEventListener('click', function() {
+    indice = (indice + 1) % escenas.length;
     mostrarEscena(indice);
 });
