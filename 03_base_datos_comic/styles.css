@@ -1,0 +1,140 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background: #fffaf4;
+  scroll-behavior: smooth;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('img/fondo.png') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 2rem;
+}
+.logo-hero {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.btn {
+  background: #a67c52;
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #855e3b;
+}
+
+/* SECCIONES */
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #a67c52;
+}
+
+/* GALERÍA PERSONAJES */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 280px;
+  padding: 1.5rem;
+}
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* CAPÍTULOS */
+.dark {
+  background: #2a2a2a;
+  color: #fff;
+}
+.chapters {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.chapter-card {
+  background: #444;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 250px;
+}
+.chapter-card h3 {
+  color: #f1c27d;
+}
+
+/* INNOVA */
+#innova p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+
+/* FOOTER */
+.footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+.footer-logo {
+  width: 60px;
+  margin-bottom: 0.5rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2rem; }
+  .gallery, .chapters { flex-direction: column; align-items: center; }
+}

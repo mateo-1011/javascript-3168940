@@ -1,15 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acordezón | El Eco que Conquistó Corazones</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    
+  <!-- HERO -->
+  <header class="hero" id="inicio">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <img src="img/logo acordezon.png" alt="Logo Acordezón" class="logo-hero" />
+      <h1>El Eco que Conquistó Corazones</h1>
+      <p>Un cómic interactivo que revive el legado de Rafael Orozco y el poder del vallenato.</p>
+      <a href="#sinopsis" class="btn">Descubre más</a>
+    </div>
+  </header>
 
+  <!-- SINOPSIS -->
+  <section id="sinopsis" class="section">
+    <div class="container">
+      <h2>Sinopsis</h2>
+      <p>
+        En una noche mágica en Becerril, Rafael Orozco adulto regresa a su pueblo natal. 
+        El sonido de un acordeón lo transporta al pasado, donde se encuentra con su versión infantil. 
+        Juntos recorren su historia: los sueños, los escenarios y el eco eterno de su música.
+      </p>
+    </div>
+  </section>
 
-    <script src="bd.js"></script>
-    <script src="app.js"></script>
+  <!-- GALERÍA DE PERSONAJES -->
+  <section id="personajes" class="section">
+    <div class="container">
+      <h2>Personajes</h2>
+      <div class="gallery">
+        <div class="card">
+          <img src="img/rafael-niño.png" alt="Rafael Niño">
+          <h3>Rafael Niño</h3>
+          <p>Soñador, curioso y apasionado por el acordeón.</p>
+        </div>
+        <div class="card">
+          <img src="img/rafael-adulto.png" alt="Rafael Adulto">
+          <h3>Rafael Adulto</h3>
+          <p>El eco del pasado que guía al niño hacia su destino musical.</p>
+        </div>
+        <div class="card">
+          <img src="img/israel-romero.png" alt="Israel Romero">
+          <h3>Israel Romero</h3>
+          <p>El amigo y compañero que dio forma al Binomio de Oro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPÍTULOS -->
+  <section id="capitulos" class="section dark">
+    <div class="container">
+      <h2>Capítulos</h2>
+      <div class="chapters">
+        <div class="chapter-card">
+          <h3>Capítulo 1</h3>
+          <p>El Sueño en Becerril</p>
+        </div>
+        <div class="chapter-card">
+          <h3>Capítulo 2</h3>
+          <p>El Binomio y la Fama</p>
+        </div>
+        <div class="chapter-card">
+          <h3>Capítulo 3</h3>
+          <p>Legado y Despedida</p>
+        </div>
+      </div>
+      <a href="#comic" class="btn">Iniciar Cómic</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <img src="img/logo.png" alt="Logo Acordezón" class="footer-logo" />
+    <p>© 2025 Acordezón | Patrimonio Musical Colombiano</p>
+  </footer>
+
+   <script src="app.js"></script>
+   <script src="bd.js"></script>
 </body>
 </html>
