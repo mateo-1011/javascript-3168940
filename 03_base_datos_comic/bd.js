@@ -1,10 +1,10 @@
 let comic = {
   "nombreComic": "El eco que conquistó corazones",
   "numeroCapitulos": "3",
-  "genero": ficcion,
+  "genero": 'ficcion',
   "sipnosis": " En una noche mágica en Becerril, Rafael Orozco adulto regresa al lugar donde todo comenzó. El sonido lejano de un acordeón lo transporta al pasado, donde se encuentra con su versión infantil: un niño lleno de sueños, timidez y amor por la música.",
   "autores": ["Mateo Higuita"],
-  "portada": "img/portada.jpg",
+  "portada": "img/fondo.png",
   "year": 2025,
   "capitulos": [
     {
@@ -31,3 +31,5 @@ let comic = {
     }
   ]
 }
+
+
