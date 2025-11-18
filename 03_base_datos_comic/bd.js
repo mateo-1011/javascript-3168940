@@ -6,12 +6,34 @@ let comic = {
   "autores": ["Mateo Higuita"],
   "portada": "img/fondo.png",
   "year": 2025,
+  
+  "personajes": [
+    {
+    "nombre" : "Rafael Orozco ",
+    "descripcion" : "Lorem ipsum dolor sit amet",
+    "imagen" : "img/rafael adulto.PNG",
+    },
+
+    {
+    "nombre" : "Rafael Orozco Niño",
+    "descripcion" : "Lorem ipsum dolor sit amet",
+    "imagen" : "img/rafael niño.PNG",
+    },
+
+    {
+    "nombre" : "Israel Romero",
+    "descripcion" : "Lorem ipsum dolor sit amet",
+    "imagen" : "img/israel romero.PNG",
+    },
+], 
+
+
   "capitulos": [
     {
       "id": 1,
-      "nombre": "El Sueño en Becerril",
-      "personajes": "Rafael Orozco Adulto, Rafael Orozco Niño",
-      "portada": "img/portada.jpg",
+      "nombre" : "El Sueño en Becerril",
+      "personajes" : "Rafael Orozco Adulto, Rafael Orozco Niño",
+      "portada" : "img/portada.jpg",
       "descripcion" : "Rafael adulto regresa a su pueblo y se reencuentra con su versión infantil. Entre acordes y recuerdos, el niño descubre el origen de su pasión por la música y el poder de cantar con el corazón."
     },
     
