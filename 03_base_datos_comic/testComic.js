@@ -17,9 +17,15 @@ console.log(comic.personajes)
 comic.personajes.forEach(char => {
   const div = document.createElement('div');
   div.classList.add('personaje');
+  div.innerHTML = `
+    <img src="${char.imagen}" alt="">
+    <p>${char.nombre}</p>
+    <p>${char.descripcion}</p>
+  `
+
+numeroPersonajes.appendChild(div)
 
 
-
-    console.log(char.nombre)
-    document.body.innerHTML += `<img src="${char.imagen}" width="200">`
+   
 });
+
