@@ -37,9 +37,9 @@ comic.personajes.forEach(char => {
 
 const chapters = document.querySelector(".chapters");
 
-chapters.innerHTML = "";   // ← borra los 3 capítulos que tienes escritos a mano
+chapters.innerHTML = "";   
 
-  comic.capitulos.forEach(cap => {   // ← "cap" no "char"
+  comic.capitulos.forEach(cap => {   
     const div = document.createElement("div");
     div.classList.add("chapter-card");
     div.innerHTML = `
