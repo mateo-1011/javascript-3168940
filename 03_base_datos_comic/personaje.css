@@ -1,0 +1,68 @@
+/* Estilos extras solo para esta página (no tocas tu styles.css original) */
+    .personajes-page { 
+      background: #fffaf4; 
+      min-height: 100vh; 
+      padding: 4rem 2rem; 
+    }
+    .titulo-personajes {
+      text-align: center;
+      font-size: 3rem;
+      color: #a67c52;
+      margin-bottom: 3rem;
+    }
+    .personaje-detalle {
+      background: white;
+      max-width: 900px;
+      margin: 3rem auto;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .personaje-detalle img {
+      width: 260px;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 10px solid #a67c52;
+      margin-bottom: 1.5rem;
+    }
+    .personaje-detalle h2 {
+      font-size: 2.5rem;
+      color: #a67c52;
+      margin: 1rem 0;
+    }
+    .rol-badge {
+      background: #a67c52;
+      color: white;
+      padding: 0.6rem 1.8rem;
+      border-radius: 30px;
+      font-weight: bold;
+      margin: 1rem 0;
+      display: inline-block;
+    }
+    .info-extra {
+      margin-top: 1.5rem;
+      line-height: 1.8;
+      color: #444;
+      font-size: 1.1rem;
+    }
+    .btn-volver {
+      display: block;
+      width: fit-content;
+      margin: 4rem auto 2rem;
+      background: #a67c52;
+      color: white;
+      padding: 1rem 2.5rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .btn-volver:hover { background: #855e3b; }
+
+    

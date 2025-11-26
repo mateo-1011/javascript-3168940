@@ -7,6 +7,7 @@ infoHero.innerHTML = `
 
 ` */
 
+import { comic } from "./bd";
 
 
 const sinopsisParrafo = document.querySelector('#sinopsis p');
@@ -25,13 +26,17 @@ gallery.innerHTML = '';
 
 comic.personajes.forEach(char => {
   const div = document.createElement('div');
+  const link = document.createElement('a');
+  link.href = "./personaje.html?id=${char.id}"
+  link.appendChild(div);
   div.classList.add('card');
   div.innerHTML = `
+
     <img src="${char.imagen}" alt="${char.nombre}">
     <h3>${char.nombre}</h3>
     <p>${char.descripcion}</p>
   `;
-  gallery.appendChild(div);
+  gallery.appendChild(link);
 });
 
 
@@ -41,7 +46,9 @@ chapters.innerHTML = "";
 
   comic.capitulos.forEach(cap => {   
     const div = document.createElement("div");
-    div.classList.add("chapter-card");
+    const link = document.createElement('a');
+  link.href = "capitulos.html?id=${cap.id}"
+  link.appendChild(div);
     div.innerHTML = `
       <div class="chapter-thumb">
         <img src="${cap.portada || 'img/miniatura.png'}" alt="Capítulo ${cap.id}: ${cap.nombre}">
@@ -52,5 +59,6 @@ chapters.innerHTML = "";
         <p>${cap.descripcion}</p>
       </div>
     `;
-    chapters.appendChild(div);
+    chapters.appendChild(link);
   });
+

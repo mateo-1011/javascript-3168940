@@ -1,4 +1,4 @@
-let comic = {
+export let comic = {
   "nombreComic": "El eco que conquistó corazones",
   "numeroCapitulos": "3",
   "genero": 'ficcion',
@@ -9,22 +9,25 @@ let comic = {
   
   "personajes": [
     {
+      "id": 1,
     "nombre" : "Rafael Orozco ",
     "descripcion" : "Lorem ipsum dolor sit amet",
     "imagen" : "img/rafael adulto.PNG",
     },
 
     {
+      "id": 2,
     "nombre" : "Rafael Orozco Niño",
     "descripcion" : "Lorem ipsum dolor sit amet",
     "imagen" : "img/rafael niño.PNG",
     },
 
     {
+      "id": 3,
     "nombre" : "Israel Romero",
     "descripcion" : "Lorem ipsum dolor sit amet",
     "imagen" : "img/israel romero.PNG",
-    },
+    }, 
 ], 
 
 
