@@ -7,11 +7,11 @@ infoHero.innerHTML = `
 
 ` */
 
-import { comic } from "./bd";
+import { comic } from "./bd.js";
 
 
-const sinopsisParrafo = document.querySelector('#sinopsis p');
-const gallery = document.querySelector('.gallery');
+const sinopsisParrafo = document.querySelector('#sinopsis');
+const gallery = document.querySelector('.section');
 
 
 
@@ -19,46 +19,48 @@ const gallery = document.querySelector('.gallery');
 
 console.log(comic);
 
-sinopsisParrafo.innerHTML = comic.sipnosis;
-
-// personajes
-gallery.innerHTML = ''; 
+sinopsisParrafo.innerHTML = comic.sipnosis; 
 
 comic.personajes.forEach(char => {
-  const div = document.createElement('div');
-  const link = document.createElement('a');
-  link.href = "./personaje.html?id=${char.id}"
-  link.appendChild(div);
-  div.classList.add('card');
-  div.innerHTML = `
+  const link = document.createElement("a");
+  link.href = `personaje.html?id=${char.id}`;
+  link.className = "card-link"; 
 
+  const card = document.createElement("div");
+  card.className = "card";
+  card.innerHTML = `
     <img src="${char.imagen}" alt="${char.nombre}">
     <h3>${char.nombre}</h3>
     <p>${char.descripcion}</p>
   `;
+
+  link.appendChild(card);
   gallery.appendChild(link);
 });
 
 
 const chapters = document.querySelector(".chapters");
 
-chapters.innerHTML = "";   
+  
 
-  comic.capitulos.forEach(cap => {   
+ comic.capitulos.forEach(cap => {
+    const link = document.createElement("a");
+    link.href = `capitulo${cap.id}.html`;
+    link.className = "chapter-link";
+
     const div = document.createElement("div");
-    const link = document.createElement('a');
-  link.href = "capitulos.html?id=${cap.id}"
-  link.appendChild(div);
+    div.className = "chapter-card";
     div.innerHTML = `
       <div class="chapter-thumb">
-        <img src="${cap.portada || 'img/miniatura.png'}" alt="Capítulo ${cap.id}: ${cap.nombre}">
+        <img src="${cap.portada || 'img/miniatura.png'}">
       </div>
       <div class="chapter-content">
         <h3>Capítulo ${cap.id}</h3>
         <p>${cap.nombre}</p>
-        <p>${cap.descripcion}</p>
       </div>
     `;
+
+    link.appendChild(div);
     chapters.appendChild(link);
   });
 
