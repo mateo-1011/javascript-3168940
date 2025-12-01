@@ -45,7 +45,7 @@ const chapters = document.querySelector(".chapters");
 
  comic.capitulos.forEach(cap => {
     const link = document.createElement("a");
-    link.href = `capitulo${cap.id}.html`;
+    link.href = `capitulos.html?id=${cap.id}.html`;
     link.className = "chapter-link";
 
     const div = document.createElement("div");
