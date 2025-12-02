@@ -1,7 +1,7 @@
 export let comic = {
   "nombreComic": "El eco que conquistó corazones",
-  "numeroCapitulos": "3",
-  "genero": 'ficcion',
+  "numeroCapitulos": 3,
+  "genero": "ficcion",
   "sipnosis": " En una noche mágica en Becerril, Rafael Orozco adulto regresa al lugar donde todo comenzó. El sonido lejano de un acordeón lo transporta al pasado, donde se encuentra con su versión infantil: un niño lleno de sueños, timidez y amor por la música.",
   "autores": ["Mateo Higuita"],
   "portada": "img/fondo.png",
@@ -10,7 +10,7 @@ export let comic = {
   "personajes": [
     {
       "id": 1,
-    "nombre" : "Rafael Orozco ",
+    "nombre" : "Rafael Orozco",
     "descripcion" : "Lorem ipsum dolor sit amet",
     "imagen" : "img/rafael adulto.PNG",
     },
@@ -35,7 +35,7 @@ export let comic = {
     {
       "id": 1,
       "nombre" : "El Sueño en Becerril",
-      "personajes" : "Rafael Orozco Adulto, Rafael Orozco Niño",
+      "personajes" : ["Rafael Orozco Adulto, Rafael Orozco Niño"],
       "portada" : "img/miniatura.png",
       "descripcion" : "Rafael adulto regresa a su pueblo y se reencuentra con su versión infantil. Entre acordes y recuerdos, el niño descubre el origen de su pasión por la música y el poder de cantar con el corazón."
     },
@@ -57,4 +57,9 @@ export let comic = {
   ]
 }
 
+carrusel: [
+  "img/hero1.jpg",
+  "img/hero2.jpg",
+  "img/hero3.jpg"
+]
 

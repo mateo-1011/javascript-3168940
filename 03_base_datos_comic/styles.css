@@ -263,3 +263,52 @@ body {
 .chapter-link:hover .chapter-thumb img {
   transform: scale(1.1);
 }
+
+
+
+
+
+
+
+
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: #000;
+}
+
+.fondo-hero {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1;
+}
+
+.fondo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0; left: 0;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.fondo-img.activa {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 20vh 20px 0;
+  color: white;
+}
