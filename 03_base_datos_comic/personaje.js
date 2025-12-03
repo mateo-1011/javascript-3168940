@@ -4,6 +4,8 @@ import { comic } from "./bd.js";
 const params = new URLSearchParams(window.location.search);
 const id = parseInt(params.get('id'));
 
+if (isNaN(id) || comic.personajes.find(p => p.id === id) === undefined) window.location.href = "index.html";
+
 // Buscamos el personaje
 const personaje = comic.personajes.find(p => p.id === id);
 
