@@ -11,23 +11,24 @@ export let comic = {
     {
       "id": 1,
     "nombre" : "Rafael Orozco",
-    "descripcion" : "Lorem ipsum dolor sit amet",
+    "descripcion" : "Un cantante carismático que regresa a sus raíces para guiar a su versión infantil y recordar su camino",
     "imagen" : "img/rafael adulto.PNG",
     },
 
     {
       "id": 2,
     "nombre" : "Rafael Orozco Niño",
-    "descripcion" : "Lorem ipsum dolor sit amet",
+    "descripcion" : "Un niño curioso y apasionado por el acordeón, lleno de sueños y sensibilidad musical",
     "imagen" : "img/rafael niño.PNG",
     },
 
     {
       "id": 3,
     "nombre" : "Israel Romero",
-    "descripcion" : "Lorem ipsum dolor sit amet",
+    "descripcion" : "Un acordeonero talentoso y enérgico cuya unión con Rafael transforma el vallenato para siempre.",
     "imagen" : "img/israel romero.PNG",
     }, 
+    
 ], 
 
 
@@ -54,6 +55,8 @@ export let comic = {
       "portada": "img/miniatura.png",
       "descripcion": "Tras conocer a Israel Romero y formar el Binomio de Oro, Rafael lleva su música a nuevos escenarios. Su eco se vuelve eterno, recordando que el vallenato vive en quienes lo sienten y lo cantan.",
     }
+
+    
   ]
 }
 

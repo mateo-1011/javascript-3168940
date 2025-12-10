@@ -10,7 +10,7 @@ hero.innerHTML = `
     <img src="img/hero3.jpg" class="fondo-img">
   </div>
 
-  <!-- TU CONTENIDO DE SIEMPRE (logo, texto, botón) -->
+  
   <div class="overlay"></div>
   <div class="hero-content">
     <img src="img/logo acordezon.png" alt="Logo Acordezón" class="logo-hero" />
